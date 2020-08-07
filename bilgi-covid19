@@ -91,6 +91,13 @@ iyilesen2=$(( $iyilesen + 2 ))
 todayiyilesen=$(wget covid19.saglik.gov.tr -q -O - | awk NR=="${iyilesen2}" | awk '{print $2}' | tr -dc '.0-9')
 
 # günlük veriler
+
+if [[ $1 =~ ^(-od|--onlydata) ]] ; then
+echo "Bu Günkü Test Sayısı: ${todaytest}"
+echo "Bu Günkü Hasta Sayısı: ${todayhasta}"
+echo "Bu Günkü Vefat Sayısı: ${todayvefat}"
+echo -e "Bu Gün1kü İyileşen Sayısı: ${todayiyilesen}\n\n a script by lazy-pwny - https://github.com/lastpingu"
+else
 banner
 echo -ne "             ${datetoday}${kirmizi}" ; date | awk '{print $2}' ; echo -ne "${tp}"
 echo "    _______________________________________"
@@ -99,3 +106,4 @@ echo -e "    |[${blink}${mavi}*${tp}] Bu Günkü Hasta Sayısı:    ${kirmizi}${
 echo -e "    |[${blink}${mavi}*${tp}] Bu Günkü Vefat Sayısı:    ${kirmizi}${todayvefat}${tp}     |"
 echo -e "    |[${blink}${mavi}*${tp}] Bu Günkü İyileşen Sayısı: ${yesil}${todayiyilesen}${tp}  |"
 echo "    _______________________________________"
+fi

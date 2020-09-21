@@ -1,3 +1,5 @@
+# BU PROJE BAZI AKSİLİKLERDEN ÖTÜRÜ ARTIK GEÇERSİZDİR YİNEDE SOURCE CODE İNCELEMEK İSTERSENİZ DOWNLOAD EDEBİLİRSİNİZ.
+
 ## kullanım
 oldukça kolay bir kullanımı vardır öncelikle indirmeniz gerekiyor
 
